@@ -11,7 +11,7 @@ class FabricYaPic(loader.Module):
 
     @loader.unrestricted
     async def spiccmd(self, message):
-        """- Search"""
+        """- Search (.spic <request>)"""
         text = utils.get_args_raw(message)
         if not text:
             await message.edit("❌ Request not specified")
