@@ -13,7 +13,7 @@ class FabricFilters(loader.Module):
         self.db = db
 
     async def filtercmd(self, message):
-        """- Adds a filter into the list."""
+        """- Adds a filter into the list ([reply] .filter <message>)"""
         filters = self.db.get("Filters", "filters", {})
         key = utils.get_args_raw(message).lower()
         reply = await message.get_reply_message()
