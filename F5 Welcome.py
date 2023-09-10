@@ -36,8 +36,7 @@ class FabricWelcome(loader.Module):
         await message.edit("✅ Activate!")
 
     async def setwelcomecmd(self, message):
-        """- Set a new greeting for new users in the chat.\nUse: .setwelcome <text (you can use {name}; {
-        chat})>; nothing."""
+        """- Set a new greeting for new users in the chat (.setwelcome <text [+{name} +{chat}]>)"""
         welcome = self.db.get("Welcome", "welcome", {})
         args = utils.get_args_raw(message)
         reply = await message.get_reply_message()
