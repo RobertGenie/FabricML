@@ -28,7 +28,7 @@ class FabricAFK(loader.Module):
         self._me = await client.get_me()
 
     async def afkcmd(self, message):
-        """- Set AFK"""
+        """- Set AFK (.afk <reason>)"""
         if utils.get_args_raw(message):
             self._db.set(__name__, "afk", utils.get_args_raw(message))
         else:
