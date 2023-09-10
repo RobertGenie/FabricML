@@ -12,7 +12,7 @@ class FabricTags(loader.Module):
     strings = {"name": "F5 Tags"}
 
     async def tagcmd(self, message):
-        """- Tag a user (.tag <@username> <text>)"""
+        """- Tag a user (.tag <@> <text>)"""
         args = utils.get_args_raw(message).split(" ")
         reply = await message.get_reply_message()
         user, tag = None, None
