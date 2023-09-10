@@ -13,6 +13,7 @@ class FabricTags(loader.Module):
 
     async def tagcmd(self, message):
         """- Tag a user (.tag <@> <text>)"""
+        
         args = utils.get_args_raw(message).split(" ")
         reply = await message.get_reply_message()
         user, tag = None, None
