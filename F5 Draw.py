@@ -69,6 +69,7 @@ class FabricDraw(loader.Module):
     }
 
     async def drawcmd(self, message):
+        """- Generate (.draw <request>)"""
         args = utils.get_args_raw(message)
         models = [
         'anything-v4.5-pruned.ckpt [65745d25]',
